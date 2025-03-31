@@ -1,0 +1,16 @@
+{"properties": [
+  {
+    "name": "jwt.secret",
+    "type": "java.lang.String",
+    "description": "Secret key JWT token"
+  },
+  {
+    "name": "jwt.duration",
+    "type": "java.lang.Integer",
+    "description": "JWT token duration in seconds"
+  },  {
+    "name": "cors.origins",
+    "type": "java.lang.String",
+    "description": "Valid hosts to access backend."
+  }
+]}
