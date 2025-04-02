@@ -39,6 +39,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 //@WebMvcTest(ProductResource.class) // commented, 
 // but excpetion application context not loaded didnt happen
 
+@SuppressWarnings("removal")
 @SpringBootTest
 @AutoConfigureMockMvc
 public class ProductResourceTests {
