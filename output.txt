@@ -339,3 +339,111 @@ Hibernate:
 ### JWK: {"p":"-s-mwGYl1YE5ill3WjSfwQ94nrDRf0_0fEEXVcAhJbTRUgvEpsJM9EQKkhSW_9BFJyXmvPWzNrV9_or_1U8GYYO2B_AKgcq-V4igTh8S9vx2mIPohBwLPNW9OJO8dcjMO4Hdku8b0gFyycmWY99D1zZpBSSb31lkYd3iQJLZ_ok","kty":"RSA","q":"5zMca7rBC6rqYNxxSi-qO0ATMmInYtJpyaqne__DMVnQr19i0B_N7r3wD7s77s-fFVqeHa0wZBcBvfumed9k1OnqkRlyHrIIEL70hCZEEO2spWAKnMKbmfJjKCqUrxJam6ADaFRGORPycLDdRWA2C4-k7Xrd_-4NYmsKdk3gEWE","d":"GtJOUstiyVWEjsr9idt1qtMzRIpbrzB75wY_CWc06QGpeYQ_Zav5_X6FiVQ56OhQzRzi8fxrtnmVev3WvLUkiX4dIzIvP27UTMfgjCM5NMQiM8LEAR8eoiin_Ab_aYiLMSmNz60xeG8jd5wRqsiRmYscXDHlyqySBL-gF8Fdw9XE6yKukmfT0E7LIfssctsPbVjBLZCmLZed9bUIeMoJDtYpJMxc99pRs2l6XiAOcT4ODDtXNly3ZWnJZNt3NASq9AWCQuzFrxsG1KTbi3i6iQU8LFwiUMvWkcsCWO1tAO5n5qN5GwLBYnZPRyd4klHtoSU5Q7Zre8fU8SqBElkOwQ","e":"AQAB","kid":"my-rsa-key-id","qi":"3mLwTAzbUGi_2x8Ys082vM9s5hmXU223wJM2bwAejguRw-HssT-msDMgE7DniO0JDBDVgwZD7NFMvo3QKJ37Zlw9Sb9B63deXIuICivLn0CPT-yPB3_f-665SZxpwlfDjRtb8BJgubYdXSSTQ8Mg4vrNynFqMoNeGIGyaXXOCr0","dp":"Rvbf-IouZEWG8VU1Buni1a4587SV4g7OXyXPo2yUNGX_39YCkyhgu7BQyVpYCxNzrYr0yTw_s9gQSSgtEL6mUIsCwyYw4t5pkrzOlqwGIqn2KFsSO-bvawwS2OI8LZtd5exts_hBh97vCpcmHSX7vPXhKxpbnAtf8qzkKl8inPk","dq":"CulRnQ_6TmepmhqtShgHy7YRcd5KB5LwpTDlqKeAedLIU46H5lSp7muOad-nS3UHCAX30mS7FO41CddXmwbdBmNny6NMzIAQe2HXvmjj63ycGk33EkDpARH8dgfUbpLKLfAWWRUpH0Z-uazPNJf-1PrZiM-0rIB6pztwCfdQ7OE","n":"4oNyrhaAO-rZyOCp2nmyI8WUh-8NH29613haT7Eq4k3rI_1bqhwlB113ToNrBxu1hpuopFQT_NfG8ts3i89iAWP31DwWQTRebv7_FcXvUut8_6kqixnDqA_W2k05cUXzmmL7Q_cILVix5jyxE_2avr9ICFJW1BRPlD9VOv2VkaDnl0nr2EYqjUVGzefdVt8FY0VnPZqzWQxjifNLLMNOHwssMfoSlIZ25ScifMOrOvzMNb8eTXqrCrBF2Iwq9ZM8MOTebSvbm3QCBT9WauxL4zxHPNKufvC2bJokwGNE2a5FBvS5mUwaN05PK1QbUNQAN-sK9U1T178_dMGsC2CK6Q"}
 ### ? Token gerado com sucesso: ###eyJraWQiOiJteS1yc2Eta2V5LWlkIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJzZWxmIiwidXNlckZpcnN0TmFtZSI6Ik1hcmlhIiwiZXhwIjoxNzQzNzE5MjQzLCJpYXQiOjE3NDM2MzI4NDMsInVzZXJJZCI6Mn0.Tdb7kn0_2iPtW3y28IoWkroucATWarZiCqbnyuyfYrSpfdMYUI1gQ2LahaHobZic8SjFE99xy1qmOCy1crI5X0sAnmRYnCX0eCXR1uCyYDSEkInPMDJR6dnNYs2g7DyVdeLadsYUBXXv3qs4RGoG-5F8vJmamXoulf5Hu_HQG_CXwou5PA3zILpiYomWT9RL4i4HMUXaclSsKuduFq0_r2QZnNA4HruPPGkw6kxnyyCNXiG6oD_r3UAuS74S-bXbaMQVBBrGCOsbzfbOs-4WvU7DjCe_hc5rq1pwvJyJpoDpsXUQC1q4CKVBGJwzOmeCmPe_RLtrhii7ZJcvzc8_fw
 2025-04-02T19:27:23.388-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2025-04-02T19:32:25.992-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'authorizationServerSecurityFilterChain' in [class path resource [com/devsuperior/dscatalog/configuration/security/authetication/AuthorizationServerConfig.class]] matching [Or [Mvc [pattern='/oauth2/**']]] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, AuthorizationServerContext, HeaderWriter, Cors, Csrf, Logout, OAuth2AuthorizationServerMetadataEndpoint, OAuth2AuthorizationEndpoint, OAuth2DeviceVerificationEndpoint, NimbusJwkSetEndpoint, OAuth2ClientAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, ExceptionTranslation, Authorization, OAuth2TokenEndpoint, OAuth2TokenIntrospectionEndpoint, OAuth2TokenRevocationEndpoint, OAuth2DeviceAuthorizationEndpoint] (1/2)
+2025-04-02T19:32:25.992-03:00 DEBUG 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /oauth2/token
+2025-04-02T19:32:25.992-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/22)
+2025-04-02T19:32:25.992-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/22)
+2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/22)
+2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking AuthorizationServerContextFilter (4/22)
+2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (5/22)
+2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (6/22)
+2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking CsrfFilter (7/22)
+2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.csrf.CsrfFilter         : Did not protect against CSRF since request did not match And [CsrfNotRequired [TRACE, HEAD, GET, OPTIONS], Not [Or [Deferred [Mvc [pattern='/oauth2/token'], Ant [pattern='/oauth2/token']], Or [Or [Ant [pattern='/oauth2/token', POST], Ant [pattern='/oauth2/introspect', POST], Ant [pattern='/oauth2/revoke', POST], Ant [pattern='/oauth2/device_authorization', POST]], Ant [pattern='/.well-known/oauth-authorization-server', GET], Or [Ant [pattern='/oauth2/authorize', GET], Ant [pattern='/oauth2/authorize', POST]], Ant [pattern='/oauth2/token', POST], Ant [pattern='/oauth2/introspect', POST], Ant [pattern='/oauth2/revoke', POST], Ant [pattern='/oauth2/device_authorization', POST], Or [Ant [pattern='/oauth2/device_verification', GET], Ant [pattern='/oauth2/device_verification', POST]], Ant [pattern='/oauth2/jwks', GET]]]]]
+2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (8/22)
+2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Ant [pattern='/logout', POST]
+2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking OAuth2AuthorizationServerMetadataEndpointFilter (9/22)
+2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking OAuth2AuthorizationEndpointFilter (10/22)
+2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking OAuth2DeviceVerificationEndpointFilter (11/22)
+2025-04-02T19:32:25.994-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking NimbusJwkSetEndpointFilter (12/22)
+2025-04-02T19:32:25.994-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking OAuth2ClientAuthenticationFilter (13/22)
+2025-04-02T19:32:25.994-03:00 TRACE 10268 --- [nio-8080-exec-2] s.a.a.ClientSecretAuthenticationProvider : Retrieved registered client
+2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] s.a.a.ClientSecretAuthenticationProvider : Validated client authentication parameters
+2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] s.a.a.ClientSecretAuthenticationProvider : Authenticated client secret
+2025-04-02T19:32:26.068-03:00 DEBUG 10268 --- [nio-8080-exec-2] o.s.a.w.OAuth2ClientAuthenticationFilter : Set SecurityContextHolder authentication to OAuth2ClientAuthenticationToken
+2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (14/22)
+2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.s.w.s.HttpSessionRequestCache        : matchingRequestParameterName is required for getMatchingRequest to lookup a value, but not provided
+2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (15/22)
+2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (16/22)
+2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (17/22)
+2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (18/22)
+2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] estMatcherDelegatingAuthorizationManager : Authorizing POST /oauth2/token
+2025-04-02T19:32:26.069-03:00 TRACE 10268 --- [nio-8080-exec-2] estMatcherDelegatingAuthorizationManager : Checking authorization on POST /oauth2/token using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda$1599/0x00000008016d2f90@9e76cc8
+2025-04-02T19:32:26.069-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking OAuth2TokenEndpointFilter (19/22)
+2025-04-02T19:32:26.069-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Did not set SecurityContextHolder since already authenticated OAuth2ClientAuthenticationToken [Principal=myclientid, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[]]
+### Criando OAuth2ResourceOwnerPasswordAuthenticationToken para ###: maria@gmail.com
+### String password ###: password
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password 
+    from
+        tb_user u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.authority 
+    from
+        tb_user_role r1_0 
+    join
+        tb_role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+2025-04-02T19:32:26.071-03:00  INFO 10268 --- [nio-8080-exec-2] c.d.dscatalog.services.UserService       : User found: maria@gmail.com
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password 
+    from
+        tb_user u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        r1_0.user_id,
+        r1_1.id,
+        r1_1.authority 
+    from
+        tb_user_role r1_0 
+    join
+        tb_role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.user_id=?
+### ? Tentando gerar JWT com as claims: ###{sub=maria@gmail.com, iss=self, userFirstName=Maria, exp=2025-04-03T22:32:26.147771500Z, iat=2025-04-02T22:32:26.147771500Z, userId=2}
+### JWKs retornados pelo JwkSource: 1
+### JWK: {"p":"-s-mwGYl1YE5ill3WjSfwQ94nrDRf0_0fEEXVcAhJbTRUgvEpsJM9EQKkhSW_9BFJyXmvPWzNrV9_or_1U8GYYO2B_AKgcq-V4igTh8S9vx2mIPohBwLPNW9OJO8dcjMO4Hdku8b0gFyycmWY99D1zZpBSSb31lkYd3iQJLZ_ok","kty":"RSA","q":"5zMca7rBC6rqYNxxSi-qO0ATMmInYtJpyaqne__DMVnQr19i0B_N7r3wD7s77s-fFVqeHa0wZBcBvfumed9k1OnqkRlyHrIIEL70hCZEEO2spWAKnMKbmfJjKCqUrxJam6ADaFRGORPycLDdRWA2C4-k7Xrd_-4NYmsKdk3gEWE","d":"GtJOUstiyVWEjsr9idt1qtMzRIpbrzB75wY_CWc06QGpeYQ_Zav5_X6FiVQ56OhQzRzi8fxrtnmVev3WvLUkiX4dIzIvP27UTMfgjCM5NMQiM8LEAR8eoiin_Ab_aYiLMSmNz60xeG8jd5wRqsiRmYscXDHlyqySBL-gF8Fdw9XE6yKukmfT0E7LIfssctsPbVjBLZCmLZed9bUIeMoJDtYpJMxc99pRs2l6XiAOcT4ODDtXNly3ZWnJZNt3NASq9AWCQuzFrxsG1KTbi3i6iQU8LFwiUMvWkcsCWO1tAO5n5qN5GwLBYnZPRyd4klHtoSU5Q7Zre8fU8SqBElkOwQ","e":"AQAB","kid":"my-rsa-key-id","qi":"3mLwTAzbUGi_2x8Ys082vM9s5hmXU223wJM2bwAejguRw-HssT-msDMgE7DniO0JDBDVgwZD7NFMvo3QKJ37Zlw9Sb9B63deXIuICivLn0CPT-yPB3_f-665SZxpwlfDjRtb8BJgubYdXSSTQ8Mg4vrNynFqMoNeGIGyaXXOCr0","dp":"Rvbf-IouZEWG8VU1Buni1a4587SV4g7OXyXPo2yUNGX_39YCkyhgu7BQyVpYCxNzrYr0yTw_s9gQSSgtEL6mUIsCwyYw4t5pkrzOlqwGIqn2KFsSO-bvawwS2OI8LZtd5exts_hBh97vCpcmHSX7vPXhKxpbnAtf8qzkKl8inPk","dq":"CulRnQ_6TmepmhqtShgHy7YRcd5KB5LwpTDlqKeAedLIU46H5lSp7muOad-nS3UHCAX30mS7FO41CddXmwbdBmNny6NMzIAQe2HXvmjj63ycGk33EkDpARH8dgfUbpLKLfAWWRUpH0Z-uazPNJf-1PrZiM-0rIB6pztwCfdQ7OE","n":"4oNyrhaAO-rZyOCp2nmyI8WUh-8NH29613haT7Eq4k3rI_1bqhwlB113ToNrBxu1hpuopFQT_NfG8ts3i89iAWP31DwWQTRebv7_FcXvUut8_6kqixnDqA_W2k05cUXzmmL7Q_cILVix5jyxE_2avr9ICFJW1BRPlD9VOv2VkaDnl0nr2EYqjUVGzefdVt8FY0VnPZqzWQxjifNLLMNOHwssMfoSlIZ25ScifMOrOvzMNb8eTXqrCrBF2Iwq9ZM8MOTebSvbm3QCBT9WauxL4zxHPNKufvC2bJokwGNE2a5FBvS5mUwaN05PK1QbUNQAN-sK9U1T178_dMGsC2CK6Q"}
+### ? Token gerado com sucesso: ###eyJraWQiOiJteS1yc2Eta2V5LWlkIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJzZWxmIiwidXNlckZpcnN0TmFtZSI6Ik1hcmlhIiwiZXhwIjoxNzQzNzE5NTQ2LCJpYXQiOjE3NDM2MzMxNDYsInVzZXJJZCI6Mn0.J02cxe4Gebj40WrJBHJuLJqUAfAfup55L5AYE7AzVOC7ee5AKB4ETQF8dOTxAYob9hBc3MYHGXFYbCzwJaY8K7tPFfEAOWGx9DdXdQA1A-NifBVif-OmXMJkEtiqZWxpWRt-Llzn4lPUvop7dU7OAyBMs0fojUMBF1E_cLWV9eQhIGGHPRDJEJUMfLEKbFLsROw7slCvsWbHDKqrz3l80i7OCcrSbVjIXWDsW3AcTukzeEki0SAb_RxyQB2HqTab027H6nliP-h1kBy2t4a2uTpssrcSmXAJhT6K-TmwwohzHxbzeKBf-N037UfiFzHRtbPc8QARppLFH8Me37zx9g
+2025-04-02T19:32:26.158-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2025-04-02T19:55:35.583-03:00  INFO 10268 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-02T19:55:35.928-03:00  INFO 10268 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-02T19:55:35.932-03:00  INFO 10268 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table if exists tb_category cascade 
+Hibernate: 
+    drop table if exists tb_product cascade 
+Hibernate: 
+    drop table if exists tb_product_category cascade 
+Hibernate: 
+    drop table if exists tb_role cascade 
+Hibernate: 
+    drop table if exists tb_user cascade 
+Hibernate: 
+    drop table if exists tb_user_role cascade 
+2025-04-02T19:55:35.936-03:00  INFO 10268 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-02T19:55:35.938-03:00  INFO 10268 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  28:28 min
+[INFO] Finished at: 2025-04-02T19:55:35-03:00
+[INFO] ------------------------------------------------------------------------
