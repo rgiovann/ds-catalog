@@ -1,4 +1,4 @@
-package com.devsuperior.dscatalog.configuration.security.authetication;
+package com.devsuperior.dscatalog.configuration.security.authentication;
 
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 

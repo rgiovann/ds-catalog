@@ -1,4 +1,6 @@
-package com.devsuperior.dscatalog.configuration.security.authetication;
+package com.devsuperior.dscatalog.configuration.security.authentication;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -8,6 +10,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.OAuth2AuthorizationServerConfigurer;
 import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
+import org.springframework.security.oauth2.server.authorization.web.authentication.DelegatingAuthenticationConverter;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationConverter;
 
@@ -24,28 +27,48 @@ public class AuthorizationServerConfig {
 
 	@Value("${jwt.duration}")
 	private Integer jwtDuration;
-
-	//private final BCryptPasswordEncoder passwordEncoder;
   
 	public AuthorizationServerConfig() { 
 	}
-
+	
 	@Bean
-	SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http, OAuth2ResourceOwnerPasswordAuthenticationProvider customAuthProvider) throws Exception {
-	    http.securityMatcher("/oauth2/**")
-	        .authorizeHttpRequests(auth -> auth
-	                .requestMatchers("/oauth2/token").permitAll()  // 🔓 Libera o endpoint para requisições sem autenticação
-	        		.anyRequest().authenticated())
-	        .csrf(csrf -> csrf.ignoringRequestMatchers("/oauth2/token"))
-	        .with(OAuth2AuthorizationServerConfigurer.authorizationServer(), customizer -> {
-	            customizer.tokenEndpoint(tokenEndpoint -> 
-	                tokenEndpoint.accessTokenRequestConverter(new OAuth2ResourceOwnerPasswordAuthenticationConverter())
-	            );
-	        })
-	        .authenticationProvider(customAuthProvider); // Adiciona o provider customizado
+	SecurityFilterChain authorizationServerSecurityFilterChain(
+	        HttpSecurity http,
+	        OAuth2ResourceOwnerPasswordAuthenticationProvider customAuthProvider,
+	        CustomOAuth2RefreshTokenAuthenticationProvider refreshTokenProvider,
+	        OAuth2ResourceOwnerPasswordAuthenticationConverter passwordConverter,
+	        CustomOAuth2RefreshTokenAuthenticationConverter refreshTokenConverter) throws Exception {
+        http.securityMatcher("/oauth2/**")
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/oauth2/token").permitAll()
+                .anyRequest().authenticated())
+            .csrf(csrf -> csrf.ignoringRequestMatchers("/oauth2/token"))
+            .with(OAuth2AuthorizationServerConfigurer.authorizationServer(), customizer -> {
+                customizer.tokenEndpoint(tokenEndpoint -> {
+                    // Configura os conversores usando accessTokenRequestConverters
+                	// DelegatingAuthenticationConverter(List<AuthenticationConverter>) 
+                	// is deprecated since version 1.4
+                    tokenEndpoint.accessTokenRequestConverters(converters ->
+                        converters.addAll(List.of( passwordConverter,refreshTokenConverter))
+                    );
+                });
+            })
+            .authenticationProvider(customAuthProvider)
+            .authenticationProvider(refreshTokenProvider);
 
-	    return http.build();
-	}
+        return http.build();
+    }
+
+
+//	@Bean
+//    OAuth2ResourceOwnerPasswordAuthenticationConverter oAuth2ResourceOwnerPasswordAuthenticationConverter() {
+//        return new OAuth2ResourceOwnerPasswordAuthenticationConverter();
+//    }
+//	
+//	@Bean
+//	CustomOAuth2RefreshTokenAuthenticationConverter customOAuth2RefreshTokenAuthenticationConverter() {
+//        return new CustomOAuth2RefreshTokenAuthenticationConverter();
+//    }
 	
 	@Bean
 	AuthenticationConverter authenticationConverter() {
@@ -89,7 +112,7 @@ só é criado após o AuthorizationServerConfig estar totalmente inicializado, f
 
  */
 	
-// TRANSFORMADO EM CLASSO POR CAUSA DO CICLO
+// TRANSFORMADO EM CLASSE POR CAUSA DO CICLO
 	
 //	@Bean
 //	RegisteredClientRepository registeredClientRepository() {

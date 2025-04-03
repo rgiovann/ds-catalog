@@ -1,13 +1,15 @@
-package com.devsuperior.dscatalog.configuration.security.authetication;
+package com.devsuperior.dscatalog.configuration.security.authentication;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.oauth2.core.endpoint.OAuth2ParameterNames;
 import org.springframework.security.web.authentication.AuthenticationConverter;
+import org.springframework.stereotype.Component;
 
 import com.devsuperior.dscatalog.configuration.security.resource.OAuth2ResourceOwnerPasswordAuthenticationToken;
 
 import org.springframework.security.core.Authentication;
 
+@Component
 public class OAuth2ResourceOwnerPasswordAuthenticationConverter  
         implements AuthenticationConverter {
 
@@ -27,8 +29,8 @@ public class OAuth2ResourceOwnerPasswordAuthenticationConverter
             throw new IllegalArgumentException("Client authentication is required");
         }
 
-        System.out.println("### Criando OAuth2ResourceOwnerPasswordAuthenticationToken para ###: " + username);
-        System.out.println("### String password ###: " + CustomAuthorizationGrantTypes.PASSWORD.getValue());
+        //System.out.println("### Criando OAuth2ResourceOwnerPasswordAuthenticationToken para ###: " + username);
+        //System.out.println("### String password ###: " + CustomAuthorizationGrantTypes.PASSWORD.getValue());
 
         return new OAuth2ResourceOwnerPasswordAuthenticationToken(clientPrincipal, username, password);
     }

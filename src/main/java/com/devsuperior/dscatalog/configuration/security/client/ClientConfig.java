@@ -13,7 +13,7 @@ import org.springframework.security.oauth2.server.authorization.client.Registere
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
 
-import com.devsuperior.dscatalog.configuration.security.authetication.CustomAuthorizationGrantTypes;
+import com.devsuperior.dscatalog.configuration.security.authentication.CustomAuthorizationGrantTypes;
 
 @Configuration
 public class ClientConfig {

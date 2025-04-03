@@ -35,25 +35,25 @@
 
  :: Spring Boot ::                (v3.4.4)
 
-2025-04-02T19:27:09.674-03:00  INFO 10268 --- [           main] c.d.dscatalog.DscatalogApplication       : Starting DscatalogApplication using Java 17.0.0.1 with PID 10268 (E:\JAVA\Projetos\dscatalog\backend\target\classes started by Acer in E:\JAVA\Projetos\dscatalog\backend)
-2025-04-02T19:27:09.678-03:00  INFO 10268 --- [           main] c.d.dscatalog.DscatalogApplication       : The following 1 profile is active: "test"
-2025-04-02T19:27:10.357-03:00  INFO 10268 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-04-02T19:27:10.411-03:00  INFO 10268 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
-2025-04-02T19:27:10.906-03:00  INFO 10268 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-02T19:27:10.917-03:00  INFO 10268 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-02T19:27:10.917-03:00  INFO 10268 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-02T19:27:10.966-03:00  INFO 10268 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-02T19:27:10.967-03:00  INFO 10268 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1252 ms
-2025-04-02T19:27:10.972-03:00 DEBUG 10268 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'cors.origins' in PropertySource 'environmentProperties' with value of type String
-2025-04-02T19:27:11.083-03:00  INFO 10268 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-02T19:27:11.226-03:00  INFO 10268 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-04-02T19:27:11.227-03:00  INFO 10268 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-02T19:27:11.265-03:00  INFO 10268 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-04-02T19:27:11.309-03:00  INFO 10268 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
-2025-04-02T19:27:11.334-03:00  INFO 10268 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-04-02T19:27:11.540-03:00  INFO 10268 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-04-02T19:27:11.576-03:00  WARN 10268 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-04-02T19:27:11.593-03:00  INFO 10268 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-04-03T14:06:07.038-03:00  INFO 6292 --- [           main] c.d.dscatalog.DscatalogApplication       : Starting DscatalogApplication using Java 17.0.0.1 with PID 6292 (E:\JAVA\Projetos\dscatalog\backend\target\classes started by Acer in E:\JAVA\Projetos\dscatalog\backend)
+2025-04-03T14:06:07.041-03:00  INFO 6292 --- [           main] c.d.dscatalog.DscatalogApplication       : The following 1 profile is active: "test"
+2025-04-03T14:06:07.726-03:00  INFO 6292 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-03T14:06:07.778-03:00  INFO 6292 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 4 JPA repository interfaces.
+2025-04-03T14:06:08.256-03:00  INFO 6292 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-03T14:06:08.266-03:00  INFO 6292 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-03T14:06:08.266-03:00  INFO 6292 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-03T14:06:08.312-03:00  INFO 6292 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-03T14:06:08.313-03:00  INFO 6292 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1235 ms
+2025-04-03T14:06:08.316-03:00 DEBUG 6292 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'cors.origins' in PropertySource 'environmentProperties' with value of type String
+2025-04-03T14:06:08.423-03:00  INFO 6292 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-03T14:06:08.563-03:00  INFO 6292 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-04-03T14:06:08.565-03:00  INFO 6292 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-03T14:06:08.604-03:00  INFO 6292 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-03T14:06:08.647-03:00  INFO 6292 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-03T14:06:08.672-03:00  INFO 6292 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-03T14:06:08.866-03:00  INFO 6292 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-03T14:06:08.902-03:00  WARN 6292 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-03T14:06:08.917-03:00  INFO 6292 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -61,7 +61,7 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-04-02T19:27:12.388-03:00  INFO 10268 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-03T14:06:09.649-03:00  INFO 6292 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: 
     drop table if exists tb_category cascade 
 Hibernate: 
@@ -200,20 +200,22 @@ Hibernate: INSERT INTO tb_product_category (product_id, category_id) VALUES (22,
 Hibernate: INSERT INTO tb_product_category (product_id, category_id) VALUES (23, 3)
 Hibernate: INSERT INTO tb_product_category (product_id, category_id) VALUES (24, 3)
 Hibernate: INSERT INTO tb_product_category (product_id, category_id) VALUES (25, 3)
-2025-04-02T19:27:12.466-03:00  INFO 10268 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-04-02T19:27:12.675-03:00 DEBUG 10268 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'jwt.duration' in PropertySource 'environmentProperties' with value of type String
-2025-04-02T19:27:12.677-03:00 DEBUG 10268 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'security.oauth2.client.client-id' in PropertySource 'environmentProperties' with value of type String
-2025-04-02T19:27:12.677-03:00 DEBUG 10268 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'security.oauth2.client.client-secret' in PropertySource 'environmentProperties' with value of type String
-2025-04-02T19:27:12.678-03:00 DEBUG 10268 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'jwt.duration' in PropertySource 'environmentProperties' with value of type String
-2025-04-02T19:27:12.682-03:00 DEBUG 10268 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'jwt.secret' in PropertySource 'environmentProperties' with value of type String
-2025-04-02T19:27:12.731-03:00 DEBUG 10268 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'security.oauth2.client.client-id' in PropertySource 'environmentProperties' with value of type String
-2025-04-02T19:27:12.731-03:00 DEBUG 10268 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'security.oauth2.client.client-secret' in PropertySource 'environmentProperties' with value of type String
-2025-04-02T19:27:12.731-03:00 DEBUG 10268 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'jwt.duration' in PropertySource 'environmentProperties' with value of type String
-2025-04-02T19:27:12.814-03:00 DEBUG 10268 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'jwt.secret' in PropertySource 'environmentProperties' with value of type String
+2025-04-03T14:06:09.717-03:00  INFO 6292 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-03T14:06:09.918-03:00 DEBUG 6292 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'jwt.duration' in PropertySource 'environmentProperties' with value of type String
+2025-04-03T14:06:09.920-03:00 DEBUG 6292 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'security.oauth2.client.client-id' in PropertySource 'environmentProperties' with value of type String
+2025-04-03T14:06:09.921-03:00 DEBUG 6292 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'security.oauth2.client.client-secret' in PropertySource 'environmentProperties' with value of type String
+2025-04-03T14:06:09.921-03:00 DEBUG 6292 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'jwt.duration' in PropertySource 'environmentProperties' with value of type String
+2025-04-03T14:06:09.924-03:00 DEBUG 6292 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'jwt.secret' in PropertySource 'environmentProperties' with value of type String
 ### JWT Secret carregado: uma-chave-secreta-muito-longa-e-segura-1234567890
 ? jwtSecret carregado corretamente com 49 bytes.
-### Chave JWK criada: ### {"p":"-s-mwGYl1YE5ill3WjSfwQ94nrDRf0_0fEEXVcAhJbTRUgvEpsJM9EQKkhSW_9BFJyXmvPWzNrV9_or_1U8GYYO2B_AKgcq-V4igTh8S9vx2mIPohBwLPNW9OJO8dcjMO4Hdku8b0gFyycmWY99D1zZpBSSb31lkYd3iQJLZ_ok","kty":"RSA","q":"5zMca7rBC6rqYNxxSi-qO0ATMmInYtJpyaqne__DMVnQr19i0B_N7r3wD7s77s-fFVqeHa0wZBcBvfumed9k1OnqkRlyHrIIEL70hCZEEO2spWAKnMKbmfJjKCqUrxJam6ADaFRGORPycLDdRWA2C4-k7Xrd_-4NYmsKdk3gEWE","d":"GtJOUstiyVWEjsr9idt1qtMzRIpbrzB75wY_CWc06QGpeYQ_Zav5_X6FiVQ56OhQzRzi8fxrtnmVev3WvLUkiX4dIzIvP27UTMfgjCM5NMQiM8LEAR8eoiin_Ab_aYiLMSmNz60xeG8jd5wRqsiRmYscXDHlyqySBL-gF8Fdw9XE6yKukmfT0E7LIfssctsPbVjBLZCmLZed9bUIeMoJDtYpJMxc99pRs2l6XiAOcT4ODDtXNly3ZWnJZNt3NASq9AWCQuzFrxsG1KTbi3i6iQU8LFwiUMvWkcsCWO1tAO5n5qN5GwLBYnZPRyd4klHtoSU5Q7Zre8fU8SqBElkOwQ","e":"AQAB","kid":"my-rsa-key-id","qi":"3mLwTAzbUGi_2x8Ys082vM9s5hmXU223wJM2bwAejguRw-HssT-msDMgE7DniO0JDBDVgwZD7NFMvo3QKJ37Zlw9Sb9B63deXIuICivLn0CPT-yPB3_f-665SZxpwlfDjRtb8BJgubYdXSSTQ8Mg4vrNynFqMoNeGIGyaXXOCr0","dp":"Rvbf-IouZEWG8VU1Buni1a4587SV4g7OXyXPo2yUNGX_39YCkyhgu7BQyVpYCxNzrYr0yTw_s9gQSSgtEL6mUIsCwyYw4t5pkrzOlqwGIqn2KFsSO-bvawwS2OI8LZtd5exts_hBh97vCpcmHSX7vPXhKxpbnAtf8qzkKl8inPk","dq":"CulRnQ_6TmepmhqtShgHy7YRcd5KB5LwpTDlqKeAedLIU46H5lSp7muOad-nS3UHCAX30mS7FO41CddXmwbdBmNny6NMzIAQe2HXvmjj63ycGk33EkDpARH8dgfUbpLKLfAWWRUpH0Z-uazPNJf-1PrZiM-0rIB6pztwCfdQ7OE","n":"4oNyrhaAO-rZyOCp2nmyI8WUh-8NH29613haT7Eq4k3rI_1bqhwlB113ToNrBxu1hpuopFQT_NfG8ts3i89iAWP31DwWQTRebv7_FcXvUut8_6kqixnDqA_W2k05cUXzmmL7Q_cILVix5jyxE_2avr9ICFJW1BRPlD9VOv2VkaDnl0nr2EYqjUVGzefdVt8FY0VnPZqzWQxjifNLLMNOHwssMfoSlIZ25ScifMOrOvzMNb8eTXqrCrBF2Iwq9ZM8MOTebSvbm3QCBT9WauxL4zxHPNKufvC2bJokwGNE2a5FBvS5mUwaN05PK1QbUNQAN-sK9U1T178_dMGsC2CK6Q"}
-### Chave Pública RSA: ### {"kty":"RSA","e":"AQAB","kid":"my-rsa-key-id","n":"4oNyrhaAO-rZyOCp2nmyI8WUh-8NH29613haT7Eq4k3rI_1bqhwlB113ToNrBxu1hpuopFQT_NfG8ts3i89iAWP31DwWQTRebv7_FcXvUut8_6kqixnDqA_W2k05cUXzmmL7Q_cILVix5jyxE_2avr9ICFJW1BRPlD9VOv2VkaDnl0nr2EYqjUVGzefdVt8FY0VnPZqzWQxjifNLLMNOHwssMfoSlIZ25ScifMOrOvzMNb8eTXqrCrBF2Iwq9ZM8MOTebSvbm3QCBT9WauxL4zxHPNKufvC2bJokwGNE2a5FBvS5mUwaN05PK1QbUNQAN-sK9U1T178_dMGsC2CK6Q"}
+### Chave JWK criada: ### {"p":"wTLmW15teNgT-f3esHCGaaAfHRYBa7HQNol2mj-vBh53k9o65ywl-MtS1islxnhcrp5qirWjgkxy09c4zy95pTECIRqTDBUR9KgbPswAncGrXQBqts-FC-5eFly3svSFS-IRPaJXP0vLZBTJPq1e3oO183PX6KWvNzL06KoLrxk","kty":"RSA","q":"5qW9S-49zqtsawex_90L75qCTQdXFrQoWgjkDnPRziDExijb7iPx21Yxfac9mBQzLEbymN5u_ZSsB5chTACo0_QsZqfPUXSTPNhRH7aUMI2K8SSENdln3gp5Jk38UxR9Om6vmN0A9XE8Z7TC7pFJ1yRX1MqKM1Xk2KhQH3Nk4Uk","d":"EZA7Lvx8868HVxJ4WhaFmI5Y0TicmIGS_FpB9ZGZJ1yksQjGQIgtzbuf1gEBctjTGXgdbIeCdIK_lveizLbaxTE19aU0YZe21gj3KXcNZvVJsVlyxBXOrd1JIxx7hyqSiWYqIkuciZgqoNO2yG2kcDneremeV5Goc75XNc_EeUy_e8Yulto-c_2VTxAD6Ym4g4EKvskfVyQhIdmXmcUbmjblikoLpkZ8a5GVTDdYW3MjsoySAWcnxFkQ_ylMnbXSUX5dRMybg1MQZ4Ii-EXGFJLuaEXAIYk4hVrFniECicDtFspbnoTPxrk4geqrb57aFI4HJgeJzT3fiSb6Ap2YEQ","e":"AQAB","kid":"my-rsa-key-id","qi":"Xzb_XxUpoW84yl_CuqgEvD77c5zOaUQyVCBeYq1NnWoo7GRDqAkKcGHa4Qz_jpIuMvArOx_4t93874ypj5qoRUyFOZYr2DxYcJNgTbGTs-BEvnmqyAgNP1Y9CI2uIsX7a-_-30MbEVufmSEzJHgZ1zGpo-_qdbGY15l9Xlh5RSQ","dp":"UaVhFFvjh55JUuymn4nuQ9UXUQNrtkd-5o1RQf6HyN43SpR_MBLIOUwzxa6WWDmlcWYhQF1irD4CiOP7bhNyJQ2BCNxiKEj_PZWNbgxodkLSWItEjd1FLLWfrXOhbk9HxbnT72gb1vQBEFp4cbRy0zZ2PlxGclsSoRE3ztuN9IE","dq":"3CjmeT0vOEA_XCbbTK1WAF9O83IHOj-7qL2F2xnI8eYrji9gR39-FGzBDvz9eVYGxsPuO-dOsLUiRJiJCwAyJyeS3mZeKZWKGfEt9oSUDYh-UNIXdUNRtwvuOpcEPNV497bB3LtQd_ifvSo5S_nZLwic4hx3MKtTp096M5s1dyk","n":"rhDPoHGBH96rQFL6g8FPryozuSvxI4QjHCTn2JKsVGzm6T68aLxQP7MZXykLMSqhdt3-_8Fme-i8wQg_Hat9HOOPuflwbLXGSdZpEIxoQTg1I5esNPFn3Tv57_o3wKtVKHQLNLUruYfczz6TBLrTACg4ICS1ufzErZTcFv6le1NwN2VeWJOZSOkigjRxr8hCLyAN__UW34xaVXeV3yGb-vcVmoJT1HpNjoEKlB0vclfmpxW3JtSESvSnY99HwcBlC8YQQiH1eWh7Eaqvzdbauv1lcqB87PU9TgzJKZce_H6VmJzF7GgFpTFYGTnY_zgrMgqJxcyXwmL0mAQMYv3nIQ"}
+### Chave Pública RSA: ### {"kty":"RSA","e":"AQAB","kid":"my-rsa-key-id","n":"rhDPoHGBH96rQFL6g8FPryozuSvxI4QjHCTn2JKsVGzm6T68aLxQP7MZXykLMSqhdt3-_8Fme-i8wQg_Hat9HOOPuflwbLXGSdZpEIxoQTg1I5esNPFn3Tv57_o3wKtVKHQLNLUruYfczz6TBLrTACg4ICS1ufzErZTcFv6le1NwN2VeWJOZSOkigjRxr8hCLyAN__UW34xaVXeV3yGb-vcVmoJT1HpNjoEKlB0vclfmpxW3JtSESvSnY99HwcBlC8YQQiH1eWh7Eaqvzdbauv1lcqB87PU9TgzJKZce_H6VmJzF7GgFpTFYGTnY_zgrMgqJxcyXwmL0mAQMYv3nIQ"}
+### JWKs retornados pelo JwkSource: 1
+### JWK: {"p":"wTLmW15teNgT-f3esHCGaaAfHRYBa7HQNol2mj-vBh53k9o65ywl-MtS1islxnhcrp5qirWjgkxy09c4zy95pTECIRqTDBUR9KgbPswAncGrXQBqts-FC-5eFly3svSFS-IRPaJXP0vLZBTJPq1e3oO183PX6KWvNzL06KoLrxk","kty":"RSA","q":"5qW9S-49zqtsawex_90L75qCTQdXFrQoWgjkDnPRziDExijb7iPx21Yxfac9mBQzLEbymN5u_ZSsB5chTACo0_QsZqfPUXSTPNhRH7aUMI2K8SSENdln3gp5Jk38UxR9Om6vmN0A9XE8Z7TC7pFJ1yRX1MqKM1Xk2KhQH3Nk4Uk","d":"EZA7Lvx8868HVxJ4WhaFmI5Y0TicmIGS_FpB9ZGZJ1yksQjGQIgtzbuf1gEBctjTGXgdbIeCdIK_lveizLbaxTE19aU0YZe21gj3KXcNZvVJsVlyxBXOrd1JIxx7hyqSiWYqIkuciZgqoNO2yG2kcDneremeV5Goc75XNc_EeUy_e8Yulto-c_2VTxAD6Ym4g4EKvskfVyQhIdmXmcUbmjblikoLpkZ8a5GVTDdYW3MjsoySAWcnxFkQ_ylMnbXSUX5dRMybg1MQZ4Ii-EXGFJLuaEXAIYk4hVrFniECicDtFspbnoTPxrk4geqrb57aFI4HJgeJzT3fiSb6Ap2YEQ","e":"AQAB","kid":"my-rsa-key-id","qi":"Xzb_XxUpoW84yl_CuqgEvD77c5zOaUQyVCBeYq1NnWoo7GRDqAkKcGHa4Qz_jpIuMvArOx_4t93874ypj5qoRUyFOZYr2DxYcJNgTbGTs-BEvnmqyAgNP1Y9CI2uIsX7a-_-30MbEVufmSEzJHgZ1zGpo-_qdbGY15l9Xlh5RSQ","dp":"UaVhFFvjh55JUuymn4nuQ9UXUQNrtkd-5o1RQf6HyN43SpR_MBLIOUwzxa6WWDmlcWYhQF1irD4CiOP7bhNyJQ2BCNxiKEj_PZWNbgxodkLSWItEjd1FLLWfrXOhbk9HxbnT72gb1vQBEFp4cbRy0zZ2PlxGclsSoRE3ztuN9IE","dq":"3CjmeT0vOEA_XCbbTK1WAF9O83IHOj-7qL2F2xnI8eYrji9gR39-FGzBDvz9eVYGxsPuO-dOsLUiRJiJCwAyJyeS3mZeKZWKGfEt9oSUDYh-UNIXdUNRtwvuOpcEPNV497bB3LtQd_ifvSo5S_nZLwic4hx3MKtTp096M5s1dyk","n":"rhDPoHGBH96rQFL6g8FPryozuSvxI4QjHCTn2JKsVGzm6T68aLxQP7MZXykLMSqhdt3-_8Fme-i8wQg_Hat9HOOPuflwbLXGSdZpEIxoQTg1I5esNPFn3Tv57_o3wKtVKHQLNLUruYfczz6TBLrTACg4ICS1ufzErZTcFv6le1NwN2VeWJOZSOkigjRxr8hCLyAN__UW34xaVXeV3yGb-vcVmoJT1HpNjoEKlB0vclfmpxW3JtSESvSnY99HwcBlC8YQQiH1eWh7Eaqvzdbauv1lcqB87PU9TgzJKZce_H6VmJzF7GgFpTFYGTnY_zgrMgqJxcyXwmL0mAQMYv3nIQ"}
+2025-04-03T14:06:11.288-03:00 DEBUG 6292 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'jwt.secret' in PropertySource 'environmentProperties' with value of type String
+2025-04-03T14:06:11.289-03:00 DEBUG 6292 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'security.oauth2.client.client-id' in PropertySource 'environmentProperties' with value of type String
+2025-04-03T14:06:11.289-03:00 DEBUG 6292 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'security.oauth2.client.client-secret' in PropertySource 'environmentProperties' with value of type String
+2025-04-03T14:06:11.290-03:00 DEBUG 6292 --- [           main] o.s.c.e.PropertySourcesPropertyResolver  : Found key 'jwt.duration' in PropertySource 'environmentProperties' with value of type String
 ### JwtEncoder injetado: ### true
 Hibernate: 
     select
@@ -238,195 +240,20 @@ Hibernate:
             on r1_1.id=r1_0.role_id 
     where
         r1_0.user_id=?
-2025-04-02T19:27:14.208-03:00  INFO 10268 --- [           main] c.d.dscatalog.services.UserService       : User found: maria@gmail.com
+2025-04-03T14:06:11.545-03:00  INFO 6292 --- [           main] c.d.dscatalog.services.UserService       : User found: maria@gmail.com
 ### [@PostConstruct] Usuário encontrado ###: maria@gmail.com
-2025-04-02T19:27:14.250-03:00  INFO 10268 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-04-02T19:27:15.385-03:00 TRACE 10268 --- [           main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {webSecurityBeanConfig=com.devsuperior.dscatalog.configuration.security.websecurity.WebSecurityBeanConfig$$SpringCGLIB$$0@53086bdc}
-2025-04-02T19:27:15.386-03:00  INFO 10268 --- [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name OAuth2ResourceOwnerPasswordAuthenticationProvider
-2025-04-02T19:27:15.386-03:00  WARN 10268 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2025-04-02T19:27:15.680-03:00 DEBUG 10268 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Mvc [pattern='/oauth2/**']] with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, AuthorizationServerContextFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, LogoutFilter, OAuth2AuthorizationServerMetadataEndpointFilter, OAuth2AuthorizationEndpointFilter, OAuth2DeviceVerificationEndpointFilter, NimbusJwkSetEndpointFilter, OAuth2ClientAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter, OAuth2TokenEndpointFilter, OAuth2TokenIntrospectionEndpointFilter, OAuth2TokenRevocationEndpointFilter, OAuth2DeviceAuthorizationEndpointFilter
-### JWKs retornados pelo JwkSource: 1
-### JWK: {"p":"-s-mwGYl1YE5ill3WjSfwQ94nrDRf0_0fEEXVcAhJbTRUgvEpsJM9EQKkhSW_9BFJyXmvPWzNrV9_or_1U8GYYO2B_AKgcq-V4igTh8S9vx2mIPohBwLPNW9OJO8dcjMO4Hdku8b0gFyycmWY99D1zZpBSSb31lkYd3iQJLZ_ok","kty":"RSA","q":"5zMca7rBC6rqYNxxSi-qO0ATMmInYtJpyaqne__DMVnQr19i0B_N7r3wD7s77s-fFVqeHa0wZBcBvfumed9k1OnqkRlyHrIIEL70hCZEEO2spWAKnMKbmfJjKCqUrxJam6ADaFRGORPycLDdRWA2C4-k7Xrd_-4NYmsKdk3gEWE","d":"GtJOUstiyVWEjsr9idt1qtMzRIpbrzB75wY_CWc06QGpeYQ_Zav5_X6FiVQ56OhQzRzi8fxrtnmVev3WvLUkiX4dIzIvP27UTMfgjCM5NMQiM8LEAR8eoiin_Ab_aYiLMSmNz60xeG8jd5wRqsiRmYscXDHlyqySBL-gF8Fdw9XE6yKukmfT0E7LIfssctsPbVjBLZCmLZed9bUIeMoJDtYpJMxc99pRs2l6XiAOcT4ODDtXNly3ZWnJZNt3NASq9AWCQuzFrxsG1KTbi3i6iQU8LFwiUMvWkcsCWO1tAO5n5qN5GwLBYnZPRyd4klHtoSU5Q7Zre8fU8SqBElkOwQ","e":"AQAB","kid":"my-rsa-key-id","qi":"3mLwTAzbUGi_2x8Ys082vM9s5hmXU223wJM2bwAejguRw-HssT-msDMgE7DniO0JDBDVgwZD7NFMvo3QKJ37Zlw9Sb9B63deXIuICivLn0CPT-yPB3_f-665SZxpwlfDjRtb8BJgubYdXSSTQ8Mg4vrNynFqMoNeGIGyaXXOCr0","dp":"Rvbf-IouZEWG8VU1Buni1a4587SV4g7OXyXPo2yUNGX_39YCkyhgu7BQyVpYCxNzrYr0yTw_s9gQSSgtEL6mUIsCwyYw4t5pkrzOlqwGIqn2KFsSO-bvawwS2OI8LZtd5exts_hBh97vCpcmHSX7vPXhKxpbnAtf8qzkKl8inPk","dq":"CulRnQ_6TmepmhqtShgHy7YRcd5KB5LwpTDlqKeAedLIU46H5lSp7muOad-nS3UHCAX30mS7FO41CddXmwbdBmNny6NMzIAQe2HXvmjj63ycGk33EkDpARH8dgfUbpLKLfAWWRUpH0Z-uazPNJf-1PrZiM-0rIB6pztwCfdQ7OE","n":"4oNyrhaAO-rZyOCp2nmyI8WUh-8NH29613haT7Eq4k3rI_1bqhwlB113ToNrBxu1hpuopFQT_NfG8ts3i89iAWP31DwWQTRebv7_FcXvUut8_6kqixnDqA_W2k05cUXzmmL7Q_cILVix5jyxE_2avr9ICFJW1BRPlD9VOv2VkaDnl0nr2EYqjUVGzefdVt8FY0VnPZqzWQxjifNLLMNOHwssMfoSlIZ25ScifMOrOvzMNb8eTXqrCrBF2Iwq9ZM8MOTebSvbm3QCBT9WauxL4zxHPNKufvC2bJokwGNE2a5FBvS5mUwaN05PK1QbUNQAN-sK9U1T178_dMGsC2CK6Q"}
-2025-04-02T19:27:15.726-03:00 DEBUG 10268 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-04-02T19:27:15.919-03:00  INFO 10268 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-04-02T19:27:16.005-03:00  INFO 10268 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-02T19:27:16.015-03:00  INFO 10268 --- [           main] c.d.dscatalog.DscatalogApplication       : Started DscatalogApplication in 6.728 seconds (process running for 6.996)
-2025-04-02T19:27:23.153-03:00  INFO 10268 --- [nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-02T19:27:23.154-03:00  INFO 10268 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-02T19:27:23.155-03:00  INFO 10268 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-04-02T19:27:23.169-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'authorizationServerSecurityFilterChain' in [class path resource [com/devsuperior/dscatalog/configuration/security/authetication/AuthorizationServerConfig.class]] matching [Or [Mvc [pattern='/oauth2/**']]] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, AuthorizationServerContext, HeaderWriter, Cors, Csrf, Logout, OAuth2AuthorizationServerMetadataEndpoint, OAuth2AuthorizationEndpoint, OAuth2DeviceVerificationEndpoint, NimbusJwkSetEndpoint, OAuth2ClientAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, ExceptionTranslation, Authorization, OAuth2TokenEndpoint, OAuth2TokenIntrospectionEndpoint, OAuth2TokenRevocationEndpoint, OAuth2DeviceAuthorizationEndpoint] (1/2)
-2025-04-02T19:27:23.169-03:00 DEBUG 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /oauth2/token
-2025-04-02T19:27:23.170-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/22)
-2025-04-02T19:27:23.170-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/22)
-2025-04-02T19:27:23.172-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/22)
-2025-04-02T19:27:23.173-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking AuthorizationServerContextFilter (4/22)
-2025-04-02T19:27:23.181-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (5/22)
-2025-04-02T19:27:23.182-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (6/22)
-2025-04-02T19:27:23.182-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking CsrfFilter (7/22)
-2025-04-02T19:27:23.185-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.csrf.CsrfFilter         : Did not protect against CSRF since request did not match And [CsrfNotRequired [TRACE, HEAD, GET, OPTIONS], Not [Or [Deferred [Mvc [pattern='/oauth2/token'], Ant [pattern='/oauth2/token']], Or [Or [Ant [pattern='/oauth2/token', POST], Ant [pattern='/oauth2/introspect', POST], Ant [pattern='/oauth2/revoke', POST], Ant [pattern='/oauth2/device_authorization', POST]], Ant [pattern='/.well-known/oauth-authorization-server', GET], Or [Ant [pattern='/oauth2/authorize', GET], Ant [pattern='/oauth2/authorize', POST]], Ant [pattern='/oauth2/token', POST], Ant [pattern='/oauth2/introspect', POST], Ant [pattern='/oauth2/revoke', POST], Ant [pattern='/oauth2/device_authorization', POST], Or [Ant [pattern='/oauth2/device_verification', GET], Ant [pattern='/oauth2/device_verification', POST]], Ant [pattern='/oauth2/jwks', GET]]]]]
-2025-04-02T19:27:23.185-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (8/22)
-2025-04-02T19:27:23.185-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Ant [pattern='/logout', POST]
-2025-04-02T19:27:23.185-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking OAuth2AuthorizationServerMetadataEndpointFilter (9/22)
-2025-04-02T19:27:23.185-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking OAuth2AuthorizationEndpointFilter (10/22)
-2025-04-02T19:27:23.185-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking OAuth2DeviceVerificationEndpointFilter (11/22)
-2025-04-02T19:27:23.185-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking NimbusJwkSetEndpointFilter (12/22)
-2025-04-02T19:27:23.186-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking OAuth2ClientAuthenticationFilter (13/22)
-2025-04-02T19:27:23.189-03:00 TRACE 10268 --- [nio-8080-exec-4] s.a.a.ClientSecretAuthenticationProvider : Retrieved registered client
-2025-04-02T19:27:23.263-03:00 TRACE 10268 --- [nio-8080-exec-4] s.a.a.ClientSecretAuthenticationProvider : Validated client authentication parameters
-2025-04-02T19:27:23.263-03:00 TRACE 10268 --- [nio-8080-exec-4] s.a.a.ClientSecretAuthenticationProvider : Authenticated client secret
-2025-04-02T19:27:23.263-03:00 DEBUG 10268 --- [nio-8080-exec-4] o.s.a.w.OAuth2ClientAuthenticationFilter : Set SecurityContextHolder authentication to OAuth2ClientAuthenticationToken
-2025-04-02T19:27:23.263-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (14/22)
-2025-04-02T19:27:23.263-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.s.w.s.HttpSessionRequestCache        : matchingRequestParameterName is required for getMatchingRequest to lookup a value, but not provided
-2025-04-02T19:27:23.263-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (15/22)
-2025-04-02T19:27:23.264-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (16/22)
-2025-04-02T19:27:23.264-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (17/22)
-2025-04-02T19:27:23.265-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (18/22)
-2025-04-02T19:27:23.265-03:00 TRACE 10268 --- [nio-8080-exec-4] estMatcherDelegatingAuthorizationManager : Authorizing POST /oauth2/token
-2025-04-02T19:27:23.265-03:00 TRACE 10268 --- [nio-8080-exec-4] estMatcherDelegatingAuthorizationManager : Checking authorization on POST /oauth2/token using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda$1599/0x00000008016d2f90@9e76cc8
-2025-04-02T19:27:23.265-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Invoking OAuth2TokenEndpointFilter (19/22)
-2025-04-02T19:27:23.266-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Did not set SecurityContextHolder since already authenticated OAuth2ClientAuthenticationToken [Principal=myclientid, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[]]
-### Criando OAuth2ResourceOwnerPasswordAuthenticationToken para ###: maria@gmail.com
-### String password ###: password
-Hibernate: 
-    select
-        u1_0.id,
-        u1_0.email,
-        u1_0.first_name,
-        u1_0.last_name,
-        u1_0.password 
-    from
-        tb_user u1_0 
-    where
-        u1_0.email=?
-Hibernate: 
-    select
-        r1_0.user_id,
-        r1_1.id,
-        r1_1.authority 
-    from
-        tb_user_role r1_0 
-    join
-        tb_role r1_1 
-            on r1_1.id=r1_0.role_id 
-    where
-        r1_0.user_id=?
-2025-04-02T19:27:23.269-03:00  INFO 10268 --- [nio-8080-exec-4] c.d.dscatalog.services.UserService       : User found: maria@gmail.com
-Hibernate: 
-    select
-        u1_0.id,
-        u1_0.email,
-        u1_0.first_name,
-        u1_0.last_name,
-        u1_0.password 
-    from
-        tb_user u1_0 
-    where
-        u1_0.email=?
-Hibernate: 
-    select
-        r1_0.user_id,
-        r1_1.id,
-        r1_1.authority 
-    from
-        tb_user_role r1_0 
-    join
-        tb_role r1_1 
-            on r1_1.id=r1_0.role_id 
-    where
-        r1_0.user_id=?
-### ? Tentando gerar JWT com as claims: ###{sub=maria@gmail.com, iss=self, userFirstName=Maria, exp=2025-04-03T22:27:23.345198400Z, iat=2025-04-02T22:27:23.345198400Z, userId=2}
-### JWKs retornados pelo JwkSource: 1
-### JWK: {"p":"-s-mwGYl1YE5ill3WjSfwQ94nrDRf0_0fEEXVcAhJbTRUgvEpsJM9EQKkhSW_9BFJyXmvPWzNrV9_or_1U8GYYO2B_AKgcq-V4igTh8S9vx2mIPohBwLPNW9OJO8dcjMO4Hdku8b0gFyycmWY99D1zZpBSSb31lkYd3iQJLZ_ok","kty":"RSA","q":"5zMca7rBC6rqYNxxSi-qO0ATMmInYtJpyaqne__DMVnQr19i0B_N7r3wD7s77s-fFVqeHa0wZBcBvfumed9k1OnqkRlyHrIIEL70hCZEEO2spWAKnMKbmfJjKCqUrxJam6ADaFRGORPycLDdRWA2C4-k7Xrd_-4NYmsKdk3gEWE","d":"GtJOUstiyVWEjsr9idt1qtMzRIpbrzB75wY_CWc06QGpeYQ_Zav5_X6FiVQ56OhQzRzi8fxrtnmVev3WvLUkiX4dIzIvP27UTMfgjCM5NMQiM8LEAR8eoiin_Ab_aYiLMSmNz60xeG8jd5wRqsiRmYscXDHlyqySBL-gF8Fdw9XE6yKukmfT0E7LIfssctsPbVjBLZCmLZed9bUIeMoJDtYpJMxc99pRs2l6XiAOcT4ODDtXNly3ZWnJZNt3NASq9AWCQuzFrxsG1KTbi3i6iQU8LFwiUMvWkcsCWO1tAO5n5qN5GwLBYnZPRyd4klHtoSU5Q7Zre8fU8SqBElkOwQ","e":"AQAB","kid":"my-rsa-key-id","qi":"3mLwTAzbUGi_2x8Ys082vM9s5hmXU223wJM2bwAejguRw-HssT-msDMgE7DniO0JDBDVgwZD7NFMvo3QKJ37Zlw9Sb9B63deXIuICivLn0CPT-yPB3_f-665SZxpwlfDjRtb8BJgubYdXSSTQ8Mg4vrNynFqMoNeGIGyaXXOCr0","dp":"Rvbf-IouZEWG8VU1Buni1a4587SV4g7OXyXPo2yUNGX_39YCkyhgu7BQyVpYCxNzrYr0yTw_s9gQSSgtEL6mUIsCwyYw4t5pkrzOlqwGIqn2KFsSO-bvawwS2OI8LZtd5exts_hBh97vCpcmHSX7vPXhKxpbnAtf8qzkKl8inPk","dq":"CulRnQ_6TmepmhqtShgHy7YRcd5KB5LwpTDlqKeAedLIU46H5lSp7muOad-nS3UHCAX30mS7FO41CddXmwbdBmNny6NMzIAQe2HXvmjj63ycGk33EkDpARH8dgfUbpLKLfAWWRUpH0Z-uazPNJf-1PrZiM-0rIB6pztwCfdQ7OE","n":"4oNyrhaAO-rZyOCp2nmyI8WUh-8NH29613haT7Eq4k3rI_1bqhwlB113ToNrBxu1hpuopFQT_NfG8ts3i89iAWP31DwWQTRebv7_FcXvUut8_6kqixnDqA_W2k05cUXzmmL7Q_cILVix5jyxE_2avr9ICFJW1BRPlD9VOv2VkaDnl0nr2EYqjUVGzefdVt8FY0VnPZqzWQxjifNLLMNOHwssMfoSlIZ25ScifMOrOvzMNb8eTXqrCrBF2Iwq9ZM8MOTebSvbm3QCBT9WauxL4zxHPNKufvC2bJokwGNE2a5FBvS5mUwaN05PK1QbUNQAN-sK9U1T178_dMGsC2CK6Q"}
-### ? Token gerado com sucesso: ###eyJraWQiOiJteS1yc2Eta2V5LWlkIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJzZWxmIiwidXNlckZpcnN0TmFtZSI6Ik1hcmlhIiwiZXhwIjoxNzQzNzE5MjQzLCJpYXQiOjE3NDM2MzI4NDMsInVzZXJJZCI6Mn0.Tdb7kn0_2iPtW3y28IoWkroucATWarZiCqbnyuyfYrSpfdMYUI1gQ2LahaHobZic8SjFE99xy1qmOCy1crI5X0sAnmRYnCX0eCXR1uCyYDSEkInPMDJR6dnNYs2g7DyVdeLadsYUBXXv3qs4RGoG-5F8vJmamXoulf5Hu_HQG_CXwou5PA3zILpiYomWT9RL4i4HMUXaclSsKuduFq0_r2QZnNA4HruPPGkw6kxnyyCNXiG6oD_r3UAuS74S-bXbaMQVBBrGCOsbzfbOs-4WvU7DjCe_hc5rq1pwvJyJpoDpsXUQC1q4CKVBGJwzOmeCmPe_RLtrhii7ZJcvzc8_fw
-2025-04-02T19:27:23.388-03:00 TRACE 10268 --- [nio-8080-exec-4] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
-2025-04-02T19:32:25.992-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'authorizationServerSecurityFilterChain' in [class path resource [com/devsuperior/dscatalog/configuration/security/authetication/AuthorizationServerConfig.class]] matching [Or [Mvc [pattern='/oauth2/**']]] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, AuthorizationServerContext, HeaderWriter, Cors, Csrf, Logout, OAuth2AuthorizationServerMetadataEndpoint, OAuth2AuthorizationEndpoint, OAuth2DeviceVerificationEndpoint, NimbusJwkSetEndpoint, OAuth2ClientAuthentication, RequestCacheAware, SecurityContextHolderAwareRequest, AnonymousAuthentication, ExceptionTranslation, Authorization, OAuth2TokenEndpoint, OAuth2TokenIntrospectionEndpoint, OAuth2TokenRevocationEndpoint, OAuth2DeviceAuthorizationEndpoint] (1/2)
-2025-04-02T19:32:25.992-03:00 DEBUG 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /oauth2/token
-2025-04-02T19:32:25.992-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/22)
-2025-04-02T19:32:25.992-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/22)
-2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/22)
-2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking AuthorizationServerContextFilter (4/22)
-2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (5/22)
-2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (6/22)
-2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking CsrfFilter (7/22)
-2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.csrf.CsrfFilter         : Did not protect against CSRF since request did not match And [CsrfNotRequired [TRACE, HEAD, GET, OPTIONS], Not [Or [Deferred [Mvc [pattern='/oauth2/token'], Ant [pattern='/oauth2/token']], Or [Or [Ant [pattern='/oauth2/token', POST], Ant [pattern='/oauth2/introspect', POST], Ant [pattern='/oauth2/revoke', POST], Ant [pattern='/oauth2/device_authorization', POST]], Ant [pattern='/.well-known/oauth-authorization-server', GET], Or [Ant [pattern='/oauth2/authorize', GET], Ant [pattern='/oauth2/authorize', POST]], Ant [pattern='/oauth2/token', POST], Ant [pattern='/oauth2/introspect', POST], Ant [pattern='/oauth2/revoke', POST], Ant [pattern='/oauth2/device_authorization', POST], Or [Ant [pattern='/oauth2/device_verification', GET], Ant [pattern='/oauth2/device_verification', POST]], Ant [pattern='/oauth2/jwks', GET]]]]]
-2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (8/22)
-2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Ant [pattern='/logout', POST]
-2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking OAuth2AuthorizationServerMetadataEndpointFilter (9/22)
-2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking OAuth2AuthorizationEndpointFilter (10/22)
-2025-04-02T19:32:25.993-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking OAuth2DeviceVerificationEndpointFilter (11/22)
-2025-04-02T19:32:25.994-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking NimbusJwkSetEndpointFilter (12/22)
-2025-04-02T19:32:25.994-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking OAuth2ClientAuthenticationFilter (13/22)
-2025-04-02T19:32:25.994-03:00 TRACE 10268 --- [nio-8080-exec-2] s.a.a.ClientSecretAuthenticationProvider : Retrieved registered client
-2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] s.a.a.ClientSecretAuthenticationProvider : Validated client authentication parameters
-2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] s.a.a.ClientSecretAuthenticationProvider : Authenticated client secret
-2025-04-02T19:32:26.068-03:00 DEBUG 10268 --- [nio-8080-exec-2] o.s.a.w.OAuth2ClientAuthenticationFilter : Set SecurityContextHolder authentication to OAuth2ClientAuthenticationToken
-2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (14/22)
-2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.s.w.s.HttpSessionRequestCache        : matchingRequestParameterName is required for getMatchingRequest to lookup a value, but not provided
-2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (15/22)
-2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (16/22)
-2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (17/22)
-2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (18/22)
-2025-04-02T19:32:26.068-03:00 TRACE 10268 --- [nio-8080-exec-2] estMatcherDelegatingAuthorizationManager : Authorizing POST /oauth2/token
-2025-04-02T19:32:26.069-03:00 TRACE 10268 --- [nio-8080-exec-2] estMatcherDelegatingAuthorizationManager : Checking authorization on POST /oauth2/token using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda$1599/0x00000008016d2f90@9e76cc8
-2025-04-02T19:32:26.069-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Invoking OAuth2TokenEndpointFilter (19/22)
-2025-04-02T19:32:26.069-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Did not set SecurityContextHolder since already authenticated OAuth2ClientAuthenticationToken [Principal=myclientid, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[]]
-### Criando OAuth2ResourceOwnerPasswordAuthenticationToken para ###: maria@gmail.com
-### String password ###: password
-Hibernate: 
-    select
-        u1_0.id,
-        u1_0.email,
-        u1_0.first_name,
-        u1_0.last_name,
-        u1_0.password 
-    from
-        tb_user u1_0 
-    where
-        u1_0.email=?
-Hibernate: 
-    select
-        r1_0.user_id,
-        r1_1.id,
-        r1_1.authority 
-    from
-        tb_user_role r1_0 
-    join
-        tb_role r1_1 
-            on r1_1.id=r1_0.role_id 
-    where
-        r1_0.user_id=?
-2025-04-02T19:32:26.071-03:00  INFO 10268 --- [nio-8080-exec-2] c.d.dscatalog.services.UserService       : User found: maria@gmail.com
-Hibernate: 
-    select
-        u1_0.id,
-        u1_0.email,
-        u1_0.first_name,
-        u1_0.last_name,
-        u1_0.password 
-    from
-        tb_user u1_0 
-    where
-        u1_0.email=?
-Hibernate: 
-    select
-        r1_0.user_id,
-        r1_1.id,
-        r1_1.authority 
-    from
-        tb_user_role r1_0 
-    join
-        tb_role r1_1 
-            on r1_1.id=r1_0.role_id 
-    where
-        r1_0.user_id=?
-### ? Tentando gerar JWT com as claims: ###{sub=maria@gmail.com, iss=self, userFirstName=Maria, exp=2025-04-03T22:32:26.147771500Z, iat=2025-04-02T22:32:26.147771500Z, userId=2}
-### JWKs retornados pelo JwkSource: 1
-### JWK: {"p":"-s-mwGYl1YE5ill3WjSfwQ94nrDRf0_0fEEXVcAhJbTRUgvEpsJM9EQKkhSW_9BFJyXmvPWzNrV9_or_1U8GYYO2B_AKgcq-V4igTh8S9vx2mIPohBwLPNW9OJO8dcjMO4Hdku8b0gFyycmWY99D1zZpBSSb31lkYd3iQJLZ_ok","kty":"RSA","q":"5zMca7rBC6rqYNxxSi-qO0ATMmInYtJpyaqne__DMVnQr19i0B_N7r3wD7s77s-fFVqeHa0wZBcBvfumed9k1OnqkRlyHrIIEL70hCZEEO2spWAKnMKbmfJjKCqUrxJam6ADaFRGORPycLDdRWA2C4-k7Xrd_-4NYmsKdk3gEWE","d":"GtJOUstiyVWEjsr9idt1qtMzRIpbrzB75wY_CWc06QGpeYQ_Zav5_X6FiVQ56OhQzRzi8fxrtnmVev3WvLUkiX4dIzIvP27UTMfgjCM5NMQiM8LEAR8eoiin_Ab_aYiLMSmNz60xeG8jd5wRqsiRmYscXDHlyqySBL-gF8Fdw9XE6yKukmfT0E7LIfssctsPbVjBLZCmLZed9bUIeMoJDtYpJMxc99pRs2l6XiAOcT4ODDtXNly3ZWnJZNt3NASq9AWCQuzFrxsG1KTbi3i6iQU8LFwiUMvWkcsCWO1tAO5n5qN5GwLBYnZPRyd4klHtoSU5Q7Zre8fU8SqBElkOwQ","e":"AQAB","kid":"my-rsa-key-id","qi":"3mLwTAzbUGi_2x8Ys082vM9s5hmXU223wJM2bwAejguRw-HssT-msDMgE7DniO0JDBDVgwZD7NFMvo3QKJ37Zlw9Sb9B63deXIuICivLn0CPT-yPB3_f-665SZxpwlfDjRtb8BJgubYdXSSTQ8Mg4vrNynFqMoNeGIGyaXXOCr0","dp":"Rvbf-IouZEWG8VU1Buni1a4587SV4g7OXyXPo2yUNGX_39YCkyhgu7BQyVpYCxNzrYr0yTw_s9gQSSgtEL6mUIsCwyYw4t5pkrzOlqwGIqn2KFsSO-bvawwS2OI8LZtd5exts_hBh97vCpcmHSX7vPXhKxpbnAtf8qzkKl8inPk","dq":"CulRnQ_6TmepmhqtShgHy7YRcd5KB5LwpTDlqKeAedLIU46H5lSp7muOad-nS3UHCAX30mS7FO41CddXmwbdBmNny6NMzIAQe2HXvmjj63ycGk33EkDpARH8dgfUbpLKLfAWWRUpH0Z-uazPNJf-1PrZiM-0rIB6pztwCfdQ7OE","n":"4oNyrhaAO-rZyOCp2nmyI8WUh-8NH29613haT7Eq4k3rI_1bqhwlB113ToNrBxu1hpuopFQT_NfG8ts3i89iAWP31DwWQTRebv7_FcXvUut8_6kqixnDqA_W2k05cUXzmmL7Q_cILVix5jyxE_2avr9ICFJW1BRPlD9VOv2VkaDnl0nr2EYqjUVGzefdVt8FY0VnPZqzWQxjifNLLMNOHwssMfoSlIZ25ScifMOrOvzMNb8eTXqrCrBF2Iwq9ZM8MOTebSvbm3QCBT9WauxL4zxHPNKufvC2bJokwGNE2a5FBvS5mUwaN05PK1QbUNQAN-sK9U1T178_dMGsC2CK6Q"}
-### ? Token gerado com sucesso: ###eyJraWQiOiJteS1yc2Eta2V5LWlkIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJzZWxmIiwidXNlckZpcnN0TmFtZSI6Ik1hcmlhIiwiZXhwIjoxNzQzNzE5NTQ2LCJpYXQiOjE3NDM2MzMxNDYsInVzZXJJZCI6Mn0.J02cxe4Gebj40WrJBHJuLJqUAfAfup55L5AYE7AzVOC7ee5AKB4ETQF8dOTxAYob9hBc3MYHGXFYbCzwJaY8K7tPFfEAOWGx9DdXdQA1A-NifBVif-OmXMJkEtiqZWxpWRt-Llzn4lPUvop7dU7OAyBMs0fojUMBF1E_cLWV9eQhIGGHPRDJEJUMfLEKbFLsROw7slCvsWbHDKqrz3l80i7OCcrSbVjIXWDsW3AcTukzeEki0SAb_RxyQB2HqTab027H6nliP-h1kBy2t4a2uTpssrcSmXAJhT6K-TmwwohzHxbzeKBf-N037UfiFzHRtbPc8QARppLFH8Me37zx9g
-2025-04-02T19:32:26.158-03:00 TRACE 10268 --- [nio-8080-exec-2] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
-2025-04-02T19:55:35.583-03:00  INFO 10268 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-04-02T19:55:35.928-03:00  INFO 10268 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-04-02T19:55:35.932-03:00  INFO 10268 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-03T14:06:11.586-03:00  INFO 6292 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-03T14:06:12.608-03:00 TRACE 6292 --- [           main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {webSecurityBeanConfig=com.devsuperior.dscatalog.configuration.security.websecurity.WebSecurityBeanConfig$$SpringCGLIB$$0@363ee411}
+2025-04-03T14:06:12.609-03:00  INFO 6292 --- [           main] eAuthenticationProviderManagerConfigurer : Found 2 AuthenticationProvider beans, with names [customOAuth2RefreshTokenAuthenticationProvider, OAuth2ResourceOwnerPasswordAuthenticationProvider]. Global Authentication Manager will not be configured with AuthenticationProviders. Consider publishing a single AuthenticationProvider bean, or wiring your Providers directly using the DSL.
+2025-04-03T14:06:12.613-03:00  INFO 6292 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-04-03T14:06:12.893-03:00 DEBUG 6292 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Mvc [pattern='/oauth2/**']] with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, AuthorizationServerContextFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, LogoutFilter, OAuth2AuthorizationServerMetadataEndpointFilter, OAuth2AuthorizationEndpointFilter, OAuth2DeviceVerificationEndpointFilter, NimbusJwkSetEndpointFilter, OAuth2ClientAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter, OAuth2TokenEndpointFilter, OAuth2TokenIntrospectionEndpointFilter, OAuth2TokenRevocationEndpointFilter, OAuth2DeviceAuthorizationEndpointFilter
+2025-04-03T14:06:12.928-03:00 DEBUG 6292 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-03T14:06:13.090-03:00  INFO 6292 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-04-03T14:06:13.150-03:00  INFO 6292 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-03T14:06:13.158-03:00  INFO 6292 --- [           main] c.d.dscatalog.DscatalogApplication       : Started DscatalogApplication in 6.459 seconds (process running for 6.748)
+2025-04-03T14:06:14.509-03:00  INFO 6292 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-03T14:06:14.860-03:00  INFO 6292 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-03T14:06:14.862-03:00  INFO 6292 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 Hibernate: 
     drop table if exists tb_category cascade 
 Hibernate: 
@@ -439,11 +266,11 @@ Hibernate:
     drop table if exists tb_user cascade 
 Hibernate: 
     drop table if exists tb_user_role cascade 
-2025-04-02T19:55:35.936-03:00  INFO 10268 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-02T19:55:35.938-03:00  INFO 10268 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-03T14:06:14.866-03:00  INFO 6292 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-03T14:06:14.868-03:00  INFO 6292 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  28:28 min
-[INFO] Finished at: 2025-04-02T19:55:35-03:00
+[INFO] Total time:  10.265 s
+[INFO] Finished at: 2025-04-03T14:06:14-03:00
 [INFO] ------------------------------------------------------------------------
