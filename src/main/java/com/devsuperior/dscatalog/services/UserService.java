@@ -4,26 +4,17 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import jakarta.persistence.EntityNotFoundException;
-
 import org.modelmapper.ModelMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devsuperior.dscatalog.dto.RoleDTO;
 import com.devsuperior.dscatalog.dto.UserDTO;
-import com.devsuperior.dscatalog.dto.UserInsertUpdateDTO;
 import com.devsuperior.dscatalog.entities.Role;
 import com.devsuperior.dscatalog.entities.User;
 import com.devsuperior.dscatalog.repositories.RoleRepository;
@@ -32,13 +23,15 @@ import com.devsuperior.dscatalog.services.exceptions.DatabaseException;
 import com.devsuperior.dscatalog.services.exceptions.NestedResourceNotFoundException;
 import com.devsuperior.dscatalog.services.exceptions.ResourceNotFoundException;
 
-@Service
-public class UserService implements UserDetailsService {
-	
-	private static Logger logger = LoggerFactory.getLogger(UserService.class);
+import jakarta.persistence.EntityNotFoundException;
 
-	@Autowired
-	private BCryptPasswordEncoder pwdEncoder;
+@Service
+public class UserService   {
+	
+	//private static Logger logger = LoggerFactory.getLogger(UserService.class);
+
+	//@Autowired
+	//private BCryptPasswordEncoder pwdEncoder;
 
 	@Autowired
 	private UserRepository userRepository;
@@ -64,21 +57,21 @@ public class UserService implements UserDetailsService {
 	}
 
 	@Transactional
-	public UserDTO insert(UserInsertUpdateDTO userInsertDTO) {
+	public UserDTO insert(UserDTO userInsertDTO) {
 		User entity = new User();
 		entity = DTOToEntity(userInsertDTO);
-		entity.setPassword(pwdEncoder.encode(userInsertDTO.getPassword()));
+		//entity.setPassword(pwdEncoder.encode(userInsertDTO.getPassword()));
 		entity = userRepository.save(entity); // reposity.save() returns a reference to object saved in DB
 		return EntityToDTO(entity);
 	}
 
 	@Transactional
-	public UserDTO update(Long id, UserInsertUpdateDTO userInsertDTO) {
+	public UserDTO update(Long id, UserDTO userInsertDTO) {
 		Optional<User> obj = userRepository.findById(id);
 		User entity = obj.orElseThrow(() -> new ResourceNotFoundException("Error. Id not found: " + id));
 		entity = DTOToEntity(userInsertDTO);
 		entity.setId(id);
-		entity.setPassword(pwdEncoder.encode(userInsertDTO.getPassword()));
+		//entity.setPassword(pwdEncoder.encode(userInsertDTO.getPassword()));
 		entity = userRepository.save(entity);
 		return EntityToDTO(entity);
 
@@ -120,15 +113,15 @@ public class UserService implements UserDetailsService {
 		return user;
 	}
 
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userRepository.findByEmail(username);
-		if (user == null) {
-			logger.error("User not found: " + username);
-			throw new UsernameNotFoundException("User not found: " + username);
-		}
-		logger.info("User found: " + username);
-		return user;
-	}
+//	@Override
+//	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//		User user = userRepository.findByEmail(username);
+//		if (user == null) {
+//			logger.error("User not found: " + username);
+//			throw new UsernameNotFoundException("User not found: " + username);
+//		}
+//		logger.info("User found: " + username);
+//		return user;
+//	}
 
 }

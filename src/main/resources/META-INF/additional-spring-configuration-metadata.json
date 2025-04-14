@@ -1,16 +1,29 @@
 {"properties": [
   {
-    "name": "jwt.secret",
+    "name": "keycloak.client-id",
     "type": "java.lang.String",
-    "description": "Secret key JWT token"
+    "description": "Client id Keycloak"
   },
   {
-    "name": "jwt.duration",
-    "type": "java.lang.Integer",
-    "description": "JWT token duration in seconds"
+    "name": "keycloak.redirect-uri",
+    "type": "java.lang.String",
+    "description": "Keycloack callback URI"
   },  {
+    "name": "keycloak.token-endpoint",
+    "type": "java.lang.String",
+    "description": "Keycloack token endpoint"
+  },  {
+    "name": "keycloak.issuer-uri",
+    "type": "java.lang.String",
+    "description": "Keycloack issuer URI"
+  },  {
+    "name": "keycloak.certs-endpoint",
+    "type": "java.lang.String",
+    "description": "Public key endpoint"
+  }
+  ,  {
     "name": "cors.origins",
     "type": "java.lang.String",
-    "description": "Valid hosts to access backend."
+    "description": "CORS enabled"
   }
 ]}

@@ -12,12 +12,12 @@ import jakarta.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerMapping;
 
-import com.devsuperior.dscatalog.dto.UserInsertUpdateDTO;
+import com.devsuperior.dscatalog.dto.UserDTO;
 import com.devsuperior.dscatalog.entities.User;
 import com.devsuperior.dscatalog.repositories.UserRepository;
 import com.devsuperior.dscatalog.resources.exceptions.FieldMessage;
 
-public class UserInsertOrUpdateValidator implements ConstraintValidator<UserInsertOrUpdateValid, UserInsertUpdateDTO> {
+public class UserInsertOrUpdateValidator implements ConstraintValidator<UserInsertOrUpdateValid, UserDTO> {
 	
 	@Autowired 
 	private UserRepository repository;
@@ -33,7 +33,7 @@ public class UserInsertOrUpdateValidator implements ConstraintValidator<UserInse
 	
 	
 	@Override
-	public boolean isValid(UserInsertUpdateDTO dto, ConstraintValidatorContext context) {
+	public boolean isValid(UserDTO dto, ConstraintValidatorContext context) {
 		
 		@SuppressWarnings("unchecked")
 		var uriVars = (Map<String,String>) request.getAttribute(HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE);
