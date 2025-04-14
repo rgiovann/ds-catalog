@@ -193,4 +193,3 @@ Esse projeto foi um exercício de aprendizado para entender o fluxo OAuth 2.0 Au
    - Use o `access_token` para chamar o endpoint `/products` via `curl`.
 
 
-![diagrama de sequência](https://github.com/rgiovann/image-repo/blob/main/sd_pkce.jpg)
