@@ -191,3 +191,6 @@ Esse projeto foi um exercício de aprendizado para entender o fluxo OAuth 2.0 Au
    - Execute a aplicação Spring Boot: `mvn spring-boot:run`.
    - Acesse a URL de autorização no navegador para obter os tokens.
    - Use o `access_token` para chamar o endpoint `/products` via `curl`.
+
+
+![diagrama de sequência](https://github.com/rgiovann/image-repo/blob/main/sd_pkce.jpg.jpg)
