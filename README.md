@@ -133,7 +133,7 @@ curl -X GET "http://localhost:8080/products?page=0&size=13&sort=id,desc&category
       "price": 99.99,
       "category": { "id": 2, "name": "Categoria Exemplo" }
     },
-    // Mais produtos...
+    Mais produtos...
   ],
   "pageable": {
     "sort": { "sorted": true, "unsorted": false, "empty": false },
