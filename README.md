@@ -1,32 +1,32 @@
-# DS Catalog - Implementação de Autenticação com Keycloak e Spring Boot 3.x
+# DS Catalog - Authentication with Keycloak and Spring Boot 3.x
 
-Este projeto faz parte do bootcamp do Nelio Alves e implementa o sistema **DS Catalog**, uma aplicação de catálogo de produtos. Originalmente, o projeto usava **Spring Authorization 2.0** com o fluxo `grant_type=password`, que não é mais recomendado por questões de segurança. Como parte do meu aprendizado, migrei a implementação para **Spring Boot 3.0** e, posteriormente, para o fluxo **OAuth 2.0 Authorization Code com PKCE** integrado ao **Keycloak** como Authorization Server.
+This project is part of Nelio Alves' bootcamp and implements the **DS Catalog** system, a product catalog application. Originally, the project used **Spring Authorization 2.0** with the `grant_type=password` flow, which is no longer recommended for security reasons. As part of my learning process, I migrated the implementation to **Spring Boot 3.0** and, later, to the **OAuth 2.0 Authorization Code with PKCE** flow integrated with **Keycloak** as the Authorization Server.
 
-Este documento descreve a implementação do fluxo de autenticação, a configuração do Keycloak, e como testar a aplicação, incluindo chamadas autenticadas a endpoints protegidos.
-
----
-
-## Objetivo
-
-O objetivo principal foi entender o fluxo de autenticação OAuth 2.0 Authorization Code com PKCE, integrando o Keycloak ao Spring Boot 3.x com Spring Security. A implementação foi focada em aprendizado, então há detalhes para produção que ainda não foram abordados (ex.: validação robusta do `state`, geração dinâmica do `code_verifier`).
+This document describes the authentication flow implementation, the Keycloak configuration, and how to test the application, including authenticated calls to protected endpoints.
 
 ---
 
-## Estrutura do Projeto
+## Goal
 
-### Classes Principais
+The main goal was to understand the OAuth 2.0 Authorization Code with PKCE flow, integrating Keycloak with Spring Boot 3.x and Spring Security. The implementation was focused on learning, so some production-ready details were not addressed (e.g.: robust `state` validation, dynamic `code_verifier` generation).
+
+---
+
+## Project Structure
+
+### Main Classes
 
 - **`AuthController`**:
-  - Gerencia o callback do Keycloak no endpoint `/keycloack/auth/callback`.
-  - Troca o código de autorização por tokens (`access_token`, `refresh_token`, `id_token`) e retorna essas informações ao navegador com dados adicionais (`userFirstName`, `userId`).
+  - Handles the Keycloak callback at the `/keycloack/auth/callback` endpoint.
+  - Exchanges the authorization code for tokens (`access_token`, `refresh_token`, `id_token`) and returns this information to the browser along with additional data (`userFirstName`, `userId`).
 
 - **`ResourceServerConfig`**:
-  - Configura o Spring Security como Resource Server para validar tokens JWT emitidos pelo Keycloak.
-  - Define regras de autorização, liberando o endpoint `/keycloack/auth/**` e protegendo `/products` com roles (`ROLE_OPERATOR`, `ROLE_ADMIN`).
+  - Configures Spring Security as a Resource Server to validate JWT tokens issued by Keycloak.
+  - Defines authorization rules, allowing the `/keycloack/auth/**` endpoint and protecting `/products` with roles (`ROLE_OPERATOR`, `ROLE_ADMIN`).
 
-### Configurações no `application.properties`
+### `application.properties` Configuration
 
-As configurações do Keycloak e do backend são definidas no arquivo `application.properties`:
+Keycloak and backend settings are defined in `application.properties`:
 
 ```properties
 # Keycloak Configuration
@@ -38,57 +38,57 @@ keycloak.issuer-uri=http://localhost:8081/realms/dscatalog-realm
 
 ---
 
-## Configuração do Keycloak
+## Keycloak Setup
 
-Para que o fluxo de autenticação funcione, é necessário configurar o Keycloak. Siga os passos abaixo:
+For the authentication flow to work, Keycloak must be configured as follows:
 
-1. **Inicie o Keycloak**:
-   - Baixe e instale o Keycloak (ou use Docker: `docker run -p 8081:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:23.0.6 start-dev`).
-   - O Keycloak deve rodar na porta 8081 para evitar conflitos com o Spring Boot (porta 8080).
-   - Acesse o Keycloak Admin Console em `http://localhost:8081/admin` e faça login (usuário: `admin`, senha: `admin`).
+1. **Start Keycloak**:
+   - Download and install Keycloak (or use Docker: `docker run -p 8081:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:23.0.6 start-dev`).
+   - Keycloak should run on port 8081 to avoid conflicts with Spring Boot (port 8080).
+   - Access the Keycloak Admin Console at `http://localhost:8081/admin` and log in (user: `admin`, password: `admin`).
 
-2. **Crie um Realm**:
-   - No Keycloak Admin Console, crie um novo realm chamado `dscatalog-realm`.
+2. **Create a Realm**:
+   - In the Keycloak Admin Console, create a new realm named `dscatalog-realm`.
 
-3. **Configure o Cliente**:
-   - Crie um cliente com as seguintes configurações:
+3. **Configure the Client**:
+   - Create a client with the following settings:
      - **Client ID**: `dscatalog-client`.
-     - **Client Authentication**: Desativado (cliente público, necessário para PKCE).
-     - **Standard Flow**: Habilitado (para suportar o fluxo Authorization Code).
+     - **Client Authentication**: Disabled (public client, required for PKCE).
+     - **Standard Flow**: Enabled (to support the Authorization Code flow).
      - **Valid Redirect URIs**: `http://localhost:8080/keycloack/auth/callback`.
-     - **Web Origins**: `http://localhost:8080` (para suportar CORS).
+     - **Web Origins**: `http://localhost:8080` (to support CORS).
 
-4. **Configure o Usuário**:
-   - Crie um usuário no realm `dscatalog-realm`:
+4. **Configure the User**:
+   - Create a user in the `dscatalog-realm`:
      - **Username**: `maria@gmail.com`.
-     - **Password**: `123456` (em "Credentials", desative "Temporary").
-     - **Roles**: Adicione as roles `ROLE_OPERATOR` e `ROLE_ADMIN` (em "Role Mapping").
-     - **Atributos**: Adicione os atributos `userFirstName` (valor: `Maria`) e `userId` (valor: `2`) na aba "Details".
+     - **Password**: `123456` (under "Credentials", disable "Temporary").
+     - **Roles**: Add the roles `ROLE_OPERATOR` and `ROLE_ADMIN` (under "Role Mapping").
+     - **Attributes**: Add the attributes `userFirstName` (value: `Maria`) and `userId` (value: `2`) in the "Details" tab.
 
-5. **Configure os Mappers**:
-   - No cliente `dscatalog-client`, vá para a aba "Client Scopes" e clique em `dscatalog-client-dedicated`.
-   - Adicione mappers para incluir os atributos `userFirstName` e `userId` no `access_token`:
+5. **Configure Mappers**:
+   - In the `dscatalog-client`, go to the "Client Scopes" tab and click on `dscatalog-client-dedicated`.
+   - Add mappers to include the `userFirstName` and `userId` attributes in the `access_token`:
      - **Name**: `userFirstName`.
      - **Mapper Type**: `User Attribute`.
      - **Token Claim Name**: `userFirstName`.
-     - Repita para o `userId`.
+     - Repeat for `userId`.
 
 ---
 
-## Como Testar a Autenticação
+## Testing the Authentication
 
-### 1. Requisição de Autorização no Navegador
+### 1. Authorization Request in the Browser
 
-Para iniciar o fluxo de autenticação, acesse a seguinte URL no navegador:
+To start the authentication flow, access the following URL in the browser:
 
 ```
 http://localhost:8081/realms/dscatalog-realm/protocol/openid-connect/auth?response_type=code&client_id=dscatalog-client&redirect_uri=http://localhost:8080/keycloack/auth/callback&scope=openid&state=abc123&code_challenge=z7cffSHPPrDiMdEtqCVaOu0oznwDP42PGJxUy0kxjUo&code_challenge_method=S256
 ```
 
-**Notas**:
-- O `code_challenge` (`z7cffSHPPrDiMdEtqCVaOu0oznwDP42PGJxUy0kxjUo`) foi gerado a partir do `code_verifier` (`MyCustomCodeVerifierWithAtLeast43Characters12345`) usando SHA-256 e codificação Base64 URL-safe.
-- Se não houver uma sessão ativa, o Keycloak exibirá a tela de login. Use as credenciais `maria@gmail.com` / `123456`.
-- Após a autenticação, o Keycloak redirecionará para o backend, que retornará os tokens no formato JSON:
+**Notes**:
+- The `code_challenge` (`z7cffSHPPrDiMdEtqCVaOu0oznwDP42PGJxUy0kxjUo`) was generated from the `code_verifier` (`MyCustomCodeVerifierWithAtLeast43Characters12345`) using SHA-256 and Base64 URL-safe encoding.
+- If there is no active session, Keycloak will display the login screen. Use the credentials `maria@gmail.com` / `123456`.
+- After authentication, Keycloak will redirect to the backend, which will return the tokens in JSON format:
   ```json
   {
     "access_token": "...",
@@ -105,35 +105,34 @@ http://localhost:8081/realms/dscatalog-realm/protocol/openid-connect/auth?respon
   }
   ```
 
-### 2. Chamada ao Endpoint Paginado `/products` com `curl`
+### 2. Calling the Paginated `/products` Endpoint with `curl`
 
-O endpoint `/products` é protegido e requer um `access_token` com roles `ROLE_OPERATOR` ou `ROLE_ADMIN`. Use o `access_token` obtido na etapa anterior para fazer a requisição.
+The `/products` endpoint is protected and requires an `access_token` with the roles `ROLE_OPERATOR` or `ROLE_ADMIN`. Use the `access_token` obtained in the previous step to make the request.
 
-**Exemplo de Requisição com `curl`**:
+**Example request with `curl`**:
 
 ```bash
 curl -X GET "http://localhost:8080/products?page=0&size=13&sort=id,desc&categoryId=2" \
-  -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJvQkdvaENwd0tNOF80dDJXZlBGTlBTZl9DcnNWMWFfNHFFanBmWV94dkdZIn0.eyJleHAiOjE3NDQ2Njk1OTYsImlhdCI6MTc0NDY2OTI5NiwiYXV0aF90aW1lIjoxNzQ0NjY5Mjk2LCJqdGkiOiI4NmVlMjRiOS02YzA5LTQ1YTItYjM1ZC02NzMzZWE0Yjc3ZjMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODEvcmVhbG1zL2RzY2F0YWxvZy1yZWFsbSIsInN1YiI6Im1hcmlhQGdtYWlsLmNvbSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImRzY2F0YWxvZy1jbGllbnQiLCJzaWQiOiJlZDI1MTBkZi0wNDQ2LTQ1ZjUtOTJiMC02YmE0ZTM5NGY4MjAiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUk9MRV9PUEVSQVRPUiIsIlJPTEVfQURNSU4iXX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6Ik1hcmlhIGRhcyBEb3JlcyIsInVzZXJGaXJzdE5hbWUiOiJNYXJpYSIsInByZWZlcnJlZF91c2VybmFtZSI6Im1hcmlhQGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJNYXJpYSIsInVzZXJJZCI6IjIiLCJmYW1pbHlfbmFtZSI6ImRhcyBEb3JlcyIsImVtYWlsIjoibWFyaWFAZ21haWwuY29tIn0.UKRPRUPj7tlNER74jdjkbi8YhRY9Da_BxHguyDe2kj11WCa8jCWSFIpUl-W-lvu_ShlcvKtFbb-fIR_DvOYP7Q7ztd3gOEzGD4r9-kePeUHeKbxMNLN-l2-vPBFJVeqAclhOP7MunkX13V8mL6q0nmFhb2XwbdaRBH8vWOgo0-syHRjNAJr_DTRyXSMLDDz2bsbfTg5qbc52egQYuZFmOHAl74RkWXSbBXm3ThQlcQZC-bLEX5zkuXd25zF5SYL59YfH1exoBVZ8rg8Sjx6ucw7cw5PpQs-7nMqFhoFDtY73a4pvzFQ2sjSKh9hG3DtRaIT5hv3QNcPhOMuBF9njqw"
+  -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJvQkdvaENwd0tNOF80dDJXZlBGTlBTZl9DcnNWMWFfNHFFanBmWV94dkdZIn0..."
 ```
 
-**Parâmetros**:
-- `page=0`: Página inicial (começa em 0).
-- `size=13`: Tamanho da página (13 produtos por página).
-- `sort=id,desc`: Ordenação por `id` em ordem decrescente.
-- `categoryId=2`: Filtra produtos da categoria com ID 2.
+**Parameters**:
+- `page=0`: First page (zero-indexed).
+- `size=13`: Page size (13 products per page).
+- `sort=id,desc`: Sort by `id` in descending order.
+- `categoryId=2`: Filters products from category ID 2.
 
-**Resposta Esperada** (exemplo):
+**Expected response** (example):
 ```json
 {
   "content": [
     {
       "id": 25,
-      "name": "Produto Exemplo",
-      "description": "Descrição do produto",
+      "name": "Sample Product",
+      "description": "Product description",
       "price": 99.99,
-      "category": { "id": 2, "name": "Categoria Exemplo" }
-    },
-    Mais produtos...
+      "category": { "id": 2, "name": "Sample Category" }
+    }
   ],
   "pageable": {
     "sort": { "sorted": true, "unsorted": false, "empty": false },
@@ -148,49 +147,47 @@ curl -X GET "http://localhost:8080/products?page=0&size=13&sort=id,desc&category
   "last": false,
   "size": 13,
   "number": 0,
-  "sort": { "sorted": true, "unsorted": false, "empty": false },
   "numberOfElements": 13,
   "first": true,
   "empty": false
 }
 ```
 
-**Notas**:
-- Certifique-se de que o `access_token` está válido (não expirado).
-- O endpoint `/products` exige que o token tenha as roles `ROLE_OPERATOR` ou `ROLE_ADMIN`, que foram configuradas para o usuário `maria@gmail.com`.
+**Notes**:
+- Make sure the `access_token` is still valid (not expired).
+- The `/products` endpoint requires the token to carry the roles `ROLE_OPERATOR` or `ROLE_ADMIN`, which were assigned to `maria@gmail.com`.
 
 ---
 
-## Fluxo de Autenticação
+## Authentication Flow
 
-1. **Requisição de Autorização**: O navegador acessa a URL de autorização do Keycloak (porta 8081), que autentica o usuário.
-2. **Redirecionamento**: O Keycloak redireciona para o backend (porta 8080) com um código de autorização.
-3. **Troca de Tokens**: O `AuthController` troca o código por tokens, enviando o `code_verifier` (PKCE) ao Keycloak.
-4. **Resposta ao Navegador**: O backend retorna os tokens e informações adicionais (`userFirstName`, `userId`).
+1. **Authorization Request**: The browser accesses the Keycloak authorization URL (port 8081), which authenticates the user.
+2. **Redirect**: Keycloak redirects to the backend (port 8080) with an authorization code.
+3. **Token Exchange**: The `AuthController` exchanges the code for tokens, sending the `code_verifier` (PKCE) to Keycloak.
+4. **Response to Browser**: The backend returns the tokens along with additional information (`userFirstName`, `userId`).
 
 ---
 
-## Reflexão
+## Reflection
 
-Esse projeto foi um exercício de aprendizado para entender o fluxo OAuth 2.0 Authorization Code com PKCE e a integração entre Keycloak e Spring Security. Durante o desenvolvimento, enfrentei desafios como erros de configuração no Keycloak (ex.: `redirect_uri` inválido) e no Spring Boot (ex.: variável comentada no `application.properties`). Embora a implementação não esteja pronta para produção, foi suficiente para compreender o fluxo de autenticação e como modernizar um projeto antigo que usava `grant_type=password`.
+This project was a learning exercise to understand the OAuth 2.0 Authorization Code with PKCE flow and the integration between Keycloak and Spring Security. During development, I faced challenges such as Keycloak configuration errors (e.g.: invalid `redirect_uri`) and Spring Boot issues (e.g.: commented-out variable in `application.properties`). Although the implementation is not production-ready, it was enough to understand the authentication flow and how to modernize a legacy project that used `grant_type=password`.
 
+---
 
+## How to Run the Project
 
-## Como Executar o Projeto
-
-1. **Pré-requisitos**:
-   - Java 17 ou superior.
+1. **Prerequisites**:
+   - Java 17 or higher.
    - Maven.
-   - Keycloak (versão 23.0.6 ou compatível).
-   - Docker (opcional, para rodar o Keycloak).
+   - Keycloak (version 23.0.6 or compatible).
+   - Docker (optional, to run Keycloak).
 
-2. **Passos**:
-   - Clone o repositório.
-   - Configure o Keycloak conforme as instruções acima.
-   - Atualize o `application.properties` com as configurações do Keycloak.
-   - Execute a aplicação Spring Boot: `mvn spring-boot:run`.
-   - Acesse a URL de autorização no navegador para obter os tokens.
-   - Use o `access_token` para chamar o endpoint `/products` via `curl`.
+2. **Steps**:
+   - Clone the repository.
+   - Configure Keycloak as described above.
+   - Update `application.properties` with your Keycloak settings.
+   - Run the Spring Boot application: `mvn spring-boot:run`.
+   - Access the authorization URL in the browser to obtain the tokens.
+   - Use the `access_token` to call the `/products` endpoint via `curl`.
 
-
-![diagrama de sequência](https://github.com/rgiovann/image-repo/blob/main/sd_pkce.jpg)
+![sequence diagram](https://github.com/rgiovann/image-repo/blob/main/sd_pkce.jpg)
